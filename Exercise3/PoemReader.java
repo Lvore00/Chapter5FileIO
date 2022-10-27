@@ -15,7 +15,6 @@ import java.util.Scanner;
 public class PoemReader {
     public static void main(String[] args) {
         try {
-         //   File file = new File("src/FileExceptionDemo/poems2.txt");
             try (Scanner sc = new Scanner(new File("src/Chapter5FileIO/Exercise3/poems2.txt"));) {
                 while (sc.hasNextLine()) {
                     String data = sc.nextLine();
