@@ -10,13 +10,11 @@ Instructions: Write a Java program to read in the 10 numbers in the example file
         the following format where xxx represents a number calculated above.*/
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Exercise1 {
-
-    //Confused about the highest num and lowest num
+    
 
     public static void main(String[] args) throws IOException {
 
@@ -55,7 +53,7 @@ public class Exercise1 {
             while (inputFile.hasNextInt()) {
                 totalSum += inputFile.nextInt();
             }
-
+            System.out.println("The sum is: ");
             System.out.println(sum);
 
         } catch (IOException ex) {
@@ -65,7 +63,6 @@ public class Exercise1 {
             inputFile.close();
         }
 
-//        double sum = numberCount+totalSum;
 
         //Highest Num
 
@@ -79,6 +76,7 @@ public class Exercise1 {
 
                 }
             }
+            System.out.println("The maximum is: ");
             System.out.println(max);
         } catch (IOException ex) {
             System.out.println("Problem reading the file");
@@ -86,9 +84,7 @@ public class Exercise1 {
         } finally {
             inputFile.close();
         }
-
-
-
+        
 
         //Lowest Num
 
@@ -102,6 +98,7 @@ public class Exercise1 {
                     min = y;
                 }
             }
+            System.out.println("The minimum is: ");
             System.out.println(min);
         }catch(IOException ex){
             System.out.println("Problem reading the file");
